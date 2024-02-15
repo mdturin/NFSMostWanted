@@ -1,6 +1,6 @@
 ﻿namespace NFSMostWanted.Enums;
 
-public enum CarSuspension
+public enum Suspension
 {
     Stock,
     Lowered,

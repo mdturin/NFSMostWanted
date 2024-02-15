@@ -1,6 +1,6 @@
 ﻿namespace NFSMostWanted.Enums;
 
-public enum CarBrake
+public enum Brake
 {
     Stock,
     Drilled,

@@ -1,6 +1,6 @@
 ﻿namespace NFSMostWanted.Enums;
 
-public enum CarFuel
+public enum Fuel
 {
     Gasoline,
     Diesel,

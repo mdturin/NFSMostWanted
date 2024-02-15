@@ -1,6 +1,6 @@
 ﻿namespace NFSMostWanted.Enums;
 
-public enum CarTire
+public enum Tire
 {
     AllSeason,
     Summer,

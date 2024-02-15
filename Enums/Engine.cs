@@ -1,6 +1,6 @@
 ﻿namespace NFSMostWanted.Enums;
 
-public enum CarEngine
+public enum Engine
 {
     V4,
     V6,

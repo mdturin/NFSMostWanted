@@ -1,6 +1,6 @@
 ﻿namespace NFSMostWanted.Enums;
 
-public enum CarBrand
+public enum Brand
 {
     Audi,
     BMW,

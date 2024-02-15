@@ -1,6 +1,6 @@
 ﻿namespace NFSMostWanted.Enums;
 
-public enum CarLight
+public enum Light
 {
     Halogen,
     LED,

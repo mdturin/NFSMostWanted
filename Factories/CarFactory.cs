@@ -7,7 +7,7 @@ namespace NFSMostWanted.Factories;
 public class CarFactory
 {
     public static ICar CreateCar(
-        CarBrand brand,
+        Brand brand,
         string model,
         Color color,
         double speed,
