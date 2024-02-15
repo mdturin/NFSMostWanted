@@ -34,3 +34,13 @@ gameplay experience.
 This expanded question incorporates scalability and data-driven design considerations, pushing you to think 
 about long-term maintainability and future-proofing the game's architecture. Have fun exploring the world of 
 design patterns in Need for Speed: Most Wanted!
+
+# Observations
+
+- Modular Car Design: The game features multiple car models with distinct handling characteristics. 
+	How could a design pattern be used to represent and create new cars while maintaining consistent behavior?
+		- Abstract Factory Pattern
+		- Prototype Pattern
+		- Builder Pattern
+		- Factory Method Pattern
+		- Singleton Pattern
