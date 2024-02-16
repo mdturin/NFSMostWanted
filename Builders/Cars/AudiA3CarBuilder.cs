@@ -1,4 +1,5 @@
 ﻿using NFSMostWanted.Abstractions;
+using NFSMostWanted.Attributes;
 using NFSMostWanted.Constants;
 using NFSMostWanted.Enums;
 using NFSMostWanted.Interfaces;
@@ -7,6 +8,7 @@ using System.Drawing;
 
 namespace NFSMostWanted.Builders.Cars;
 
+[CarBuilder(Brand.Audi, CarModel.AudiA3)]
 public class AudiA3CarBuilder : ACarBuilder
 {
     public override ICar Build(Color color)

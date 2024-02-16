@@ -6,18 +6,15 @@ namespace NFSMostWanted.Factories;
 
 public class CarFactory : ICarFactory
 {
-    private readonly Dictionary<Brand, ICarFactory> _factories = new()
-    {
-        { Brand.Audi, new AudiCarFactory() }
-    };
+    public static Dictionary<(Brand, string), ICarBuilder> Builders { get; } = [];
 
     public ICar CreateCar(Brand brand, string model, Color color)
     {
-        if(!_factories.TryGetValue(brand, out var factory))
+        if (!Builders.TryGetValue((brand, model), out var builder))
         {
             throw new NotImplementedException();
         }
 
-        return factory.CreateCar(brand, model, color);
+        return builder.Build(color);
     }
 }
