@@ -19,6 +19,6 @@ public interface ICarBuilder
     ICarBuilder SetFuel(FuelType fuel);
     ICarBuilder SetLight(LightType light);
     ICarBuilder SetSuspension(SuspensionType suspension);
-    ICar Build();
+    ICar Build(Color color);
 }
 

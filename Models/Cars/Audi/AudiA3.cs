@@ -5,20 +5,20 @@ using System.Drawing;
 
 namespace NFSMostWanted.Models.Cars.Audi;
 
-public class AudiA3(Color color) : ICar
+public class AudiA3 : ICar
 {
-    public Brand Brand { get; private set; } = Brand.Audi;
-    public string Model { get; private set; } = CarModel.AudiA3;
-    public Color Color { get; private set; } = color;
-    public int HorsePower { get; private set; } = 150;
-    public double Speed { get; private set; } = 220;
-    public double Acceleration { get; private set; } = 7.2;
-    public double Handling { get; private set; } = 7.5;
-    public EngineType Engine { get; private set; } = EngineType.Audi_TSFI;
-    public TireType Tire { get; private set; } = TireType.Sport;
-    public BrakeType Brake { get; private set; } = BrakeType.Sport;
-    public BodyType Body { get; private set; } = BodyType.Hatchback;
-    public FuelType Fuel { get; private set; } = FuelType.Petrol;
-    public LightType Light { get; private set; } = LightType.LED;
-    public SuspensionType Suspension { get; private set; } = SuspensionType.Sport;
+    public Brand Brand { get; set; }
+    public string Model { get; set; }
+    public Color Color { get; set; }
+    public int HorsePower { get; set; }
+    public double Speed { get; set; }
+    public double Acceleration { get; set; }
+    public double Handling { get; set; }
+    public EngineType Engine { get; set; }
+    public TireType Tire { get; set; }
+    public BrakeType Brake { get; set; }
+    public BodyType Body { get; set; }
+    public FuelType Fuel { get; set; }
+    public LightType Light { get; set; }
+    public SuspensionType Suspension { get; set; }
 }

@@ -18,5 +18,6 @@ public enum FuelType
     RacingFuel,
     Nitromethane,
     Electric,
-    Hybrid
+    Hybrid,
+    Premium
 }

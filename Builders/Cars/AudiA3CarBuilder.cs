@@ -1,83 +1,117 @@
 ﻿using NFSMostWanted.Enums;
 using NFSMostWanted.Interfaces;
+using NFSMostWanted.Models.Cars.Audi;
 using System.Drawing;
 
 namespace NFSMostWanted.Builders.Cars;
 
 public class AudiA3CarBuilder : ICarBuilder
 {
-    public ICar Build()
-    {
+    private ICar? _car;
 
+    public ICar Build(Color color)
+    {
+        _car = new AudiA3();
+
+        SetAcceleration(8.2);
+        SetBody(BodyType.Hatchback);
+        SetBrake(BrakeType.ABS);
+        SetBrand(Brand.Audi);
+        SetColor(color);
+        SetEngine(EngineType.Petrol);
+        SetFuel(FuelType.Premium);
+        SetHandling(7.5);
+        SetHorsePower(150);
+        SetLight(LightType.LED);
+        SetModel("A3");
+        SetSpeed(220);
+        SetSuspension(SuspensionType.Sport);
+        SetTire(TireType.Sport);
+
+        return _car;
     }
 
     public ICarBuilder SetAcceleration(double acceleration)
     {
-        throw new NotImplementedException();
+        _car.Acceleration = acceleration;
+        return this;
     }
 
     public ICarBuilder SetBody(BodyType body)
     {
-        throw new NotImplementedException();
+        _car.Body = body;
+        return this;
     }
 
     public ICarBuilder SetBrake(BrakeType brake)
     {
-        throw new NotImplementedException();
+        _car.Brake = brake;
+        return this;
     }
 
     public ICarBuilder SetBrand(Brand brand)
     {
-        throw new NotImplementedException();
+        _car.Brand = brand;
+        return this;
     }
 
     public ICarBuilder SetColor(Color color)
     {
-        throw new NotImplementedException();
+        _car.Color = color;
+        return this;
     }
 
     public ICarBuilder SetEngine(EngineType engine)
     {
-        throw new NotImplementedException();
+        _car.Engine = engine;
+        return this;
     }
 
     public ICarBuilder SetFuel(FuelType fuel)
-    {
-        throw new NotImplementedException();
+    {  
+        _car.Fuel = fuel;
+        return this;
     }
 
     public ICarBuilder SetHandling(double handling)
     {
-        throw new NotImplementedException();
+        _car.Handling = handling;
+        return this;
     }
 
     public ICarBuilder SetHorsePower(int horsePower)
     {
-        throw new NotImplementedException();
+        _car.HorsePower = horsePower;
+        return this;
     }
 
     public ICarBuilder SetLight(LightType light)
     {
-        throw new NotImplementedException();
+        _car.Light = light;
+        return this;
     }
 
     public ICarBuilder SetModel(string model)
     {
-        throw new NotImplementedException();
+        _car.Model = model;
+        return this;
     }
 
     public ICarBuilder SetSpeed(double speed)
     {
-        throw new NotImplementedException();
+        _car.Speed = speed;
+        return this;
     }
 
     public ICarBuilder SetSuspension(SuspensionType suspension)
     {
-        throw new NotImplementedException();
+        _car.Suspension = suspension;
+        return this;
     }
 
     public ICarBuilder SetTire(TireType tire)
     {
-        throw new NotImplementedException();
+        _car.Tire = tire;
+        return this;
     }
 }

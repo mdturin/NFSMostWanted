@@ -19,5 +19,6 @@ public enum BrakeType
     Street,
     Sport,
     Comfort,
-    Touring
+    Touring,
+    ABS,
 }

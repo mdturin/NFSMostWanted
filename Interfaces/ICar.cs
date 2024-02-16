@@ -5,18 +5,18 @@ namespace NFSMostWanted.Interfaces;
 
 public interface ICar
 {
-    Brand Brand { get; }
-    string Model { get; }
-    Color Color { get; }
-    int HorsePower { get; }
-    double Speed { get; }
-    double Acceleration { get; }
-    double Handling { get; }
-    EngineType Engine { get; }
-    TireType Tire { get; }
-    BrakeType Brake { get; }
-    BodyType Body { get; }
-    FuelType Fuel { get; }
-    LightType Light { get; }
-    SuspensionType Suspension { get; }
+    Brand Brand { get; set; }
+    string Model { get; set; }
+    Color Color { get; set; }
+    int HorsePower { get; set; }
+    double Speed { get; set; }
+    double Acceleration { get; set; }
+    double Handling { get; set; }
+    EngineType Engine { get; set; }
+    TireType Tire { get; set; }
+    BrakeType Brake { get; set; }
+    BodyType Body { get; set; }
+    FuelType Fuel { get; set; }
+    LightType Light { get; set; }
+    SuspensionType Suspension { get; set; }
 }

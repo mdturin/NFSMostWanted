@@ -7,4 +7,5 @@ public enum EngineType
     Audi_TDI,
     Audi_eTron,
     Audi_SLine,
+    Petrol,
 }
