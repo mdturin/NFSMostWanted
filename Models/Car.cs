@@ -20,4 +20,9 @@ public class Car(Brand brand, string model, Color color) : ICar
     public FuelType Fuel { get; set; }
     public LightType Light { get; set; }
     public SuspensionType Suspension { get; set; }
+
+    public override string ToString()
+    {
+        return $"Brand: {Brand}, Model: {Model}, Color: {Color}, HorsePower: {HorsePower}, Speed: {Speed}, Acceleration: {Acceleration}, Handling: {Handling}, Engine: {Engine}, Tire: {Tire}, Brake: {Brake}, Body: {Body}, Fuel: {Fuel}, Light: {Light}, Suspension: {Suspension}";
+    }
 }

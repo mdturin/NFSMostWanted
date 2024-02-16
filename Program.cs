@@ -1,8 +1,8 @@
-﻿using NFSMostWanted.Attributes;
+﻿using NFSMostWanted.Constants;
+using NFSMostWanted.Enums;
 using NFSMostWanted.Factories;
-using NFSMostWanted.Helpers;
-using NFSMostWanted.Interfaces;
-using System.Reflection;
+using NFSMostWanted.Services;
+using System.Drawing;
 
 namespace NFSMostWanted;
 
@@ -10,14 +10,17 @@ public class Program
 {
     public static void Main( string[] args )
     {
-        var carFactoryTypes = AttributeHelper.GetAllTypesFromAttribute<CarBuilderAttribute>();
-        foreach (var carFactoryType in carFactoryTypes)
-        {
-            var type = carFactoryType.GetCustomAttribute<CarBuilderAttribute>();
-            if(type != null && Activator.CreateInstance(carFactoryType) is ICarBuilder carBuilder)
-            {
-                CarFactory.Builders.Add((type.Brand, type.Model), carBuilder);
-            }
-        }
+        CarFactoryService.RegisterAllCarBuilders();
+
+        var carFactory = new CarFactory();
+        var audiA3BlackCar = carFactory.CreateCar(Brand.Audi, CarModel.AudiA3, Color.Black);
+        var audiA4RedCar = carFactory.CreateCar(Brand.Audi, CarModel.AudiA4, Color.Red);
+        var bmw3SeriesWhiteCar = carFactory.CreateCar(Brand.BMW, CarModel.BMW3Series, Color.White);
+
+        Console.WriteLine(audiA3BlackCar);
+        Console.WriteLine("----------------------");
+        Console.WriteLine(audiA4RedCar);
+        Console.WriteLine("----------------------");
+        Console.WriteLine(bmw3SeriesWhiteCar);
     }
 }
