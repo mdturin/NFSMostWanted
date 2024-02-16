@@ -7,21 +7,21 @@ using System.Drawing;
 
 namespace NFSMostWanted.Builders.Cars;
 
-public class AudiA3CarBuilder : ACarBuilder
+public class AudiA4CarBuilder : ACarBuilder
 {
     public override ICar Build(Color color)
     {
-        Car = new Car(Brand.Audi, CarModel.AudiA3, color);
+        Car = new Car(Brand.Audi, CarModel.AudiA4, color);
 
-        SetAcceleration(8.2);
-        SetBody(BodyType.Hatchback);
+        SetAcceleration(7.3);
+        SetBody(BodyType.Sedan);
         SetBrake(BrakeType.ABS);
         SetEngine(EngineType.Petrol);
         SetFuel(FuelType.Premium);
-        SetHandling(7.5);
-        SetHorsePower(150);
+        SetHandling(8.5);
+        SetHorsePower(190);
         SetLight(LightType.LED);
-        SetSpeed(220);
+        SetSpeed(240);
         SetSuspension(SuspensionType.Sport);
         SetTire(TireType.Sport);
 

@@ -1,15 +1,14 @@
-﻿using NFSMostWanted.Constants;
-using NFSMostWanted.Enums;
+﻿using NFSMostWanted.Enums;
 using NFSMostWanted.Interfaces;
 using System.Drawing;
 
-namespace NFSMostWanted.Models.Cars.Audi;
+namespace NFSMostWanted.Models;
 
-public class AudiA3 : ICar
+public class Car(Brand brand, string model, Color color) : ICar
 {
-    public Brand Brand { get; set; }
-    public string Model { get; set; }
-    public Color Color { get; set; }
+    public Brand Brand { get; set; } = brand;
+    public string Model { get; set; } = model;
+    public Color Color { get; set; } = color;
     public int HorsePower { get; set; }
     public double Speed { get; set; }
     public double Acceleration { get; set; }
