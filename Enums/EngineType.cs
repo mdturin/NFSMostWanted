@@ -8,4 +8,5 @@ public enum EngineType
     Audi_eTron,
     Audi_SLine,
     Petrol,
+    Diesel,
 }
