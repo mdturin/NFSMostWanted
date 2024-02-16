@@ -1,4 +1,5 @@
 ﻿using NFSMostWanted.Enums;
+using NFSMostWanted.Helpers;
 using NFSMostWanted.Interfaces;
 using System.Drawing;
 
@@ -9,6 +10,25 @@ public abstract class ACarBuilder : ICarBuilder
     protected ICar? Car;
 
     public abstract ICar Build(Color color);
+
+    public ICar UpdateCar(ICar car, string typeName, object value)
+    {
+        if (car.Clone() is not ICar updatedCar)
+            throw new Exception("Car can't be cloned!");
+
+        var propertyInfo = typeof(ICar).GetProperty(typeName)
+            ?? throw new Exception("Property not found!");
+
+        if (!propertyInfo.CanWrite)
+            throw new Exception("Property can't be written!");
+
+        if (!TypeHelper.IsAssignable(value, propertyInfo.PropertyType))
+            throw new Exception("Value can't be assigned to property!");
+
+        propertyInfo.SetValue(updatedCar, value);
+
+        return updatedCar;
+    }
 
     public ICarBuilder SetAcceleration(double acceleration)
     {

@@ -1,5 +1,6 @@
 ﻿using NFSMostWanted.Enums;
 using System.Drawing;
+using System.Reflection;
 
 namespace NFSMostWanted.Interfaces;
 
@@ -20,5 +21,6 @@ public interface ICarBuilder
     ICarBuilder SetLight(LightType light);
     ICarBuilder SetSuspension(SuspensionType suspension);
     ICar Build(Color color);
+    ICar UpdateCar(ICar car, string typeName, object value);
 }
 

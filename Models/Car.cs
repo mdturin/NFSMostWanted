@@ -21,6 +21,28 @@ public class Car(Brand brand, string model, Color color) : ICar
     public LightType Light { get; set; }
     public SuspensionType Suspension { get; set; }
 
+    public object Clone()
+    {
+        var car = new Car(Brand, Model, Color)
+        {
+            HorsePower = HorsePower,
+            Speed = Speed,
+            Acceleration = Acceleration,
+            Handling = Handling,
+            Engine = Engine,
+            Tire = Tire,
+            Brake = Brake,
+            Body = Body,
+            Fuel = Fuel,
+            Light = Light,
+            Suspension = Suspension,
+            Model = Model,
+            Color = Color.FromArgb(Color.ToArgb())
+        };
+
+        return car;
+    }
+
     public override string ToString()
     {
         return $"Brand: {Brand}, Model: {Model}, Color: {Color}, HorsePower: {HorsePower}, Speed: {Speed}, Acceleration: {Acceleration}, Handling: {Handling}, Engine: {Engine}, Tire: {Tire}, Brake: {Brake}, Body: {Body}, Fuel: {Fuel}, Light: {Light}, Suspension: {Suspension}";

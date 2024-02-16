@@ -3,7 +3,7 @@ using System.Drawing;
 
 namespace NFSMostWanted.Interfaces;
 
-public interface ICar
+public interface ICar : ICloneable
 {
     Brand Brand { get; set; }
     string Model { get; set; }

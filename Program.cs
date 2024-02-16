@@ -1,6 +1,7 @@
 ﻿using NFSMostWanted.Constants;
 using NFSMostWanted.Enums;
 using NFSMostWanted.Factories;
+using NFSMostWanted.Interfaces;
 using NFSMostWanted.Services;
 using System.Drawing;
 
@@ -25,5 +26,15 @@ public class Program
         Console.WriteLine(bmw3SeriesWhiteCar);
         Console.WriteLine("----------------------");
         Console.WriteLine(fordGT40BlueCar);
+        Console.WriteLine("----------------------");
+
+        var newAudiA3BlackCar = carFactory
+            .UpdateCar(audiA3BlackCar, nameof(ICar.Suspension), SuspensionType.Racing);
+
+        Console.WriteLine(newAudiA3BlackCar);
+        Console.WriteLine("----------------------");
+
+        audiA3BlackCar.Engine = EngineType.V8;
+        Console.WriteLine(audiA3BlackCar.Engine + " " + newAudiA3BlackCar.Engine);
     }
 }

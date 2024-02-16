@@ -29,4 +29,11 @@ public class AudiA3CarBuilder : ACarBuilder
 
         return Car;
     }
+
+    //public ICar Update(ICar car, Func<ICar, object> func, object value)
+    //{
+    //    var property = func(car);
+    //    property = value;
+    //    return car;
+    //}
 }
