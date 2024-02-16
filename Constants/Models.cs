@@ -14,6 +14,7 @@ public class CarModel
     public const string DodgeChallenger = "Challenger";
     public const string DodgeViper = "Viper";
     public const string FordMustang = "Mustang";
+    public const string FordGT40 = "GT40";
     public const string LamborghiniAventador = "Aventador";
     public const string LamborghiniGallardo = "Gallardo";
     public const string MazdaRX7 = "RX-7";

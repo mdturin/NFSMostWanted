@@ -9,4 +9,5 @@ public enum EngineType
     Audi_SLine,
     Petrol,
     Diesel,
+    V8,
 }
