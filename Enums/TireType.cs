@@ -1,7 +1,8 @@
 ﻿namespace NFSMostWanted.Enums;
 
-public enum Tire
+public enum TireType
 {
+    Sport,
     AllSeason,
     Summer,
     Winter,

@@ -1,6 +1,6 @@
 ﻿namespace NFSMostWanted.Enums;
 
-public enum Suspension
+public enum SuspensionType
 {
     Stock,
     Lowered,

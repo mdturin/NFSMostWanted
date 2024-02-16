@@ -1,6 +1,6 @@
 ﻿namespace NFSMostWanted.Enums;
 
-public enum Body
+public enum BodyType
 {
     Coupe,
     Sedan,

@@ -4,19 +4,14 @@ using System.Drawing;
 
 namespace NFSMostWanted.Factories;
 
-public class CarFactory
+public class CarFactory : ICarFactory
 {
-    public static ICar CreateCar(
-        Brand brand,
-        string model,
-        Color color,
-        double speed,
-        double acceleration,
-        double handling)
+    public ICar CreateCar(Brand brand, string model, Color color)
     {
         return brand switch
         {
-            _ => throw new ArgumentException("Invalid car brand.")
+            Brand.Audi => new AudiCarFactory().CreateCar(brand, model, color),
+            _ => throw new NotImplementedException()
         };
     }
 }
